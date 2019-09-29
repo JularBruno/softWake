@@ -1,0 +1,368 @@
+{
+	"info": {
+		"name": "SOS",
+		"_postman_id": "c74fa643-fd9f-fd1a-7010-e3ccd37da182",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notifications",
+			"description": "",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{asistencias_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/notifications?sort={\"timestamp\":-1}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "{\"timestamp\":-1}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/divisions/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"divisions",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Notifications - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imeis\":[\"861092035153241\",\"861092035153299\"], \n\t\"forAll\":false,\n\t\"type\":\"1\",\n\t\"message\":\"Holasssss\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/notifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"notifications"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"area\":\"5bb3ae505871e08c2935ea4f\",\n\t\"manager\": \"5bb3aebf5871e08c2935ea53\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/divisions/5bb3aed05871e08c2935ea54",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"divisions",
+								"5bb3aed05871e08c2935ea54"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/divisions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"divisions"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b7452243-258f-48ed-8f7b-4c86d69de1e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ffca0f0-3943-4223-98d2-8dbb7cd5e11c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "User - GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{asistencias_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/users/5c4a0f1ec680241d282aadfe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"5c4a0f1ec680241d282aadfe"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imei\": \"Raul Quiroga\",\n\t\"pnId\": \"1234\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Ensure",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imei\": \"12345\",\n\t\"pnId\": \"1231233123123\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/users/ensure",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"ensure"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"imei\": \"Juan Moreno\",\n    \"pnId\": \"1234\",\n    \"id\": \"5c4a0f1ec680241d282aadfe\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/users/5c4a0f1ec680241d282aadfe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"5c4a0f1ec680241d282aadfe"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "User - Delete by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/users/5c4b4d72502dc73ea76cc3c0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"5c4b4d72502dc73ea76cc3c0"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Delete all",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/users/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"all"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7b079b8e-bfa0-46e4-ab45-84cce8a4c489",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a051b96b-9119-4254-bf8d-cddbb91cfa00",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
