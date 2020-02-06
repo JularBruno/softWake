@@ -5,7 +5,8 @@ const alarmSchema = new Schema({
     time: {type: String},
     days: [{type: String}],
     active: { type: Boolean, default: false },
-    setting:{ type: Schema.Types.ObjectId, ref: 'setting' },
+    // setting:{ type: Schema.Types.ObjectId, ref: 'setting' },
+    setting:  {type: String},
 })
 alarmSchema.plugin(require('meanie-mongoose-to-json'));
 

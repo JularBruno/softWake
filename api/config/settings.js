@@ -18,7 +18,7 @@ const settings = {
 		logging  : 'console.log',
 		timezone : '-03:00',
 		host     : 'localhost',
-		name     : 'canadez'
+		name     : 'testingIonic'
 	},
 	pagging    : {
 		itemsPerPage  : 10
