@@ -28,7 +28,7 @@
     "lodash": "^4.17.11",
     "meanie-mongoose-to-json": "^1.3.0",
     "mercadopago": "^1.0.24",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "mongoose": "^5.5.5",
     "mongoose-unique-validator": "^2.0.2",
     "node-pushnotifications": "^1.1.7",
